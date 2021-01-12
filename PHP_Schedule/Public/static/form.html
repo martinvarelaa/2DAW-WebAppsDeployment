@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Añadir contacto</title>
+    <link rel="stylesheet" href="../assests/common.css">
+    <link rel="stylesheet" href="../assests/form/form.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="navBar">
+        <nav>
+            <h1>AÑADIR</h1>
+            <ul class="navList">
+                <li><a href="./form.html">Agregar</a></li>
+                <li><a href="../../index.html">Volver</a></li>
+            </ul>
+
+
+        </nav>
+    </div>
+    <div class="content">
+        <div id="form">
+            <form action="../../Templates/succes.php" method="GET">
+                <label>Agenda</label>
+                <select name="option">
+                <option>Personal</option>
+                <option>Profesional</option>
+                </select>
+                <label>Nombre:</label>
+                <input type="text" name="name" required>
+                <label>Apellidos:</label>
+                <input type="text" name="surname" required>
+                <label>Email:</label>
+                <input type="email" name="email" required>
+                <label>Teléfono</label>
+                <input type="number" name="telephone" required>
+                
+
+                <input type="submit" value="Añadir contacto">
+            </form>
+        </div>
+
+
+    </div>
+    <div class="footer">
+        <footer>Martin Varela martinvarelaa@gmail.com </footer>
+        <ul class="iconList" >
+            <li><a href="https://www.instagram.com/"><img class="icons" src="../assests/img/logotipo-de-instagram.svg"></a></li>
+            <li><a href="https://twitter.com/?lang=es"><img class="icons" src="../assests/img/twitter.svg"></a></li>
+            <li><a href="https://es-es.facebook.com/"><img class="icons" src="../assests/img/facebook.svg"></a></li>
+            <li><a href="https://www.linkedin.com/feed/"><img class="icons" src="../assests/img/linkedin.svg"></a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

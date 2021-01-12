@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+<div class="jumbotron">
+    <p class="display-4 m-1">Las palabras del día</p>
+    <table class="table m-4">
+       <tr>
+           <th>
+               Word list
+           </th>
+       </tr>
+
+            {% for word in words %}
+        <tr>
+            <td>
+                <a href="{{ path('word', {'palabra' : word}) }}">{{ word }}</a>
+            </td>
+        </tr>
+            {% endfor %}
+
+    </table>
+
+
+</div>
+
+
+
+{% endblock %}
+
+
+

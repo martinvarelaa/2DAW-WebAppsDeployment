@@ -1,0 +1,53 @@
+
+/*Agenda personal*/
+#agendaPersonal {
+
+    grid-area: agPer;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+
+}
+
+#agendaPersonal img {
+    width: 50%;
+    height: 25%;
+
+}
+
+#agendaPersonal h2 {
+    align-self: center;
+}
+
+
+/*Agenda profesional*/
+#agendaProfesional {
+
+    grid-area: agPro;
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+
+}
+
+#agendaProfesional img {
+    width: 50%;
+    height: 25%;
+
+}
+
+#agendaProfesional h2 {
+    align-self: center;
+}
+.content {
+    grid-area: cont;
+    display: grid;
+    grid-template-columns: 5% 40% 10% 40% 5%;
+    grid-template-areas:
+    " . agPer . agPro . ";
+}
+
+a{
+    text-align: center;
+}
+
