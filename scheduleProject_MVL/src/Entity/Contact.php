@@ -4,10 +4,13 @@ namespace App\Entity;
 
 use App\Repository\ContactRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ContactRepository::class)
+ * @UniqueEntity("email")
+ * @UniqueEntity("Telephone")
  */
 class Contact
 {
@@ -33,7 +36,7 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=150)
-     *
+     * @Assert\Email()
      */
     private $email;
 
@@ -51,6 +54,9 @@ class Contact
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank
+     * @Assert\Positive
+     * @Assert\Length(9)
      */
     private $Telephone;
 
@@ -142,4 +148,8 @@ class Contact
 
         return $this;
     }
+
+
+
+
 }

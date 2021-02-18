@@ -18,12 +18,14 @@ nav{
 
 
 footer{
+    padding: 0 20px;
     margin-top: 20px;
     position: absolute;
     bottom: 0;
     width: 99%;
     height: 2.5rem;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
 }
 #wrapper{
     padding-bottom: 2.5rem;
@@ -31,7 +33,7 @@ footer{
 }
 #page-container{
     position: relative;
-    min-height: 130vh;
+    min-height: 100vh;
 
 }
 
@@ -61,6 +63,35 @@ background-color: #85dcb9;
 .navIcon{
     color: #85dcb9;
 }
+
+.icon{
+
+    width: 30px;
+    height: 30px;
+
+}
+
+.footer-list{
+    display: flex;
+    width: 80%;
+    list-style: none;
+    justify-self: flex-end;
+    justify-content: flex-end;
+}
+
+.footer-list li{
+    margin: 0 10px;
+}
+
+footer p{
+
+    width: 20%;
+    justify-self: flex-start;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
 
 
 
