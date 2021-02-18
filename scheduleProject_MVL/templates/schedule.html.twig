@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ absolute_url(asset('/styles/schedule.css')) }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+
+        {% if data %}
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Surname</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Scheudle</th>
+                    <th scope="col">Telephone</th>
+                    <th scope="col">Edit</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+
+
+                {% for key,contact in data %}
+
+                    <tr class="table-row">
+                        <a class="tableLink" href="#">
+                            <th scope="row">{{ key+1 }}</th>
+                            <td>{{ contact.name }}</td>
+                            <td>{{ contact.surname }}</td>
+                            <td>{{ contact.age }}</td>
+                            <td>{{ contact.email }}</td>
+                            <td>{{ contact.schedule }}</td>
+                            <td>{{ contact.Telephone }}</td>
+                            <td><a href="{{ path('modify', {"id" : contact.id, "schedule" : contact.schedule}) }}"><button class="btn btn-success hvr-grow-rotate"><img class="user_icon" src="{{ absolute_url(asset('/assets/editar.svg')) }}"></img></button></a></td>
+                            <td><a href="{{ path('delete', {"id": contact.id, "schedule" : contact.schedule}) }}"><button class="btn btn-warning hvr-grow-rotate"><img class="user_icon" src="{{ absolute_url(asset('/assets/delete.svg')) }}"></img></button></a></td>
+
+                        </a>
+                        </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p class="display-4 text-center w-100 mt-5">No hay datos que mostrar</p>
+        {% endif %}
+
+{% endblock %}

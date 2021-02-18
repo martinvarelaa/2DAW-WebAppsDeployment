@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Josefin+Sans&display=swap');
+
+
+
+nav{
+    font-family: 'Josefin Sans';
+    font-size: 20px !important;
+    color: black;
+    width: 100%;
+    background-color: #e27d60 ;
+
+}
+
+.navbar-brand{
+    margin-left: 7%;
+}
+
+
+
+footer{
+    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 99%;
+    height: 2.5rem;
+    text-align: center;
+}
+#wrapper{
+    padding-bottom: 2.5rem;
+
+}
+#page-container{
+    position: relative;
+    min-height: 130vh;
+
+}
+
+body{
+background-color: #85dcb9;
+}
+
+#changeFont{
+    font-family: 'Dosis';
+}
+
+.navbar-brand{
+    color: #85dcb9;    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.navbar-brand:hover{
+    color: #85dcb9;
+}
+
+.menuItem{
+    color: #85dcb9;
+
+}
+
+.navIcon{
+    color: #85dcb9;
+}
+
+
+

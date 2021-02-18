@@ -1,0 +1,145 @@
+
+
+.mainIcon {
+    padding: 20px;
+    width: 130px;
+    height: 130px;
+}
+
+
+#home-content{
+
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-areas:    " . card card card ."
+                            " .   img1 img3 img2  ."
+;
+
+}
+
+#img1{
+    text-align: center;
+    grid-area: img1;
+
+}
+#img2{
+    text-align: center ;
+    grid-area: img2;
+}
+#img3{
+    text-align: center;
+
+    grid-area: img3;
+}
+
+.mainLink{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    display: grid;
+    width: 50%;
+}
+
+.mainLink:hover{
+    color: black;
+}
+
+.mainLink img{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+
+}
+
+.mainDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3px;
+}
+
+.card{
+    height: fit-content;
+    width: 30%;
+}
+
+.card-img{
+    height: 200px;
+}
+
+.cards{
+    display: flex;
+    grid-area: card;
+    justify-content: space-evenly;
+
+}
+
+.hvr-underline-from-center:before{
+
+    background-color: firebrick;
+
+
+
+
+}
+
+.hvr-underline-from-center{
+
+
+
+
+
+
+}
+
+.card{
+    background: #c38d9e;
+    height: 90%;
+    max-height: 40vh;
+    overflow: hidden;
+}
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    max-height: 40vh;
+    overflow: hidden;
+
+}
+
+.card-title{
+    text-align: center;
+    letter-spacing: 1.5px;
+    color: #85dcb9;
+    font-weight: bold;
+
+
+}
+
+.card-text{
+    text-align: justify;
+    letter-spacing: 1.5px;
+    color: black;
+    max-height: 20vh;
+    overflow: hidden;
+
+}
+
+.hvr-ripple-out:before
+{
+    border: #c38d9e solid 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

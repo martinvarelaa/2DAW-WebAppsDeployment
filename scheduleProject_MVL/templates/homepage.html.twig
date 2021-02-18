@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('/styles/home.css') }}" rel="stylesheet"/>
+{% endblock %}
+{% block content %}
+    <div id="home-content" class="pt-5">
+        <div class="cards">
+            <div class="card text-white mb-3 p-5 hvr-ripple-out">
+
+
+                    <h5 class="card-title">Separa a tus socios de tus amigos.</h5>
+                    <p class="card-text">Siempre se ha dicho que los amigos y los negocios no se llevan bien, sería porque nadie los habia unido y separado a la misma vez antes!</p>
+
+
+            </div>
+
+            <div class="card  text-white mb-3 p-5 hvr-ripple-out">
+
+                    <h5 class="card-title">Aprovecha tu tiempo!</h5>
+                    <p class="card-text">Una buena gestión siempre te puede ahorrar tiempo, y el tiempo, es oro!</p>
+
+
+            </div>
+
+            <div class="card text-white mb-3 p-5 hvr-ripple-out">
+
+                    <h5 class="card-title">Sé productivo.</h5>
+                    <p class="card-text">Pon energía en todo lo que haces a diario, el resultado será cada vez mejor!</p>
+
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class ="mainDiv" id="img1"><a class=" pb-2 mainLink hvr-underline-from-center" href="{{ path('schedule', {"schedule" : "Profesional"} ) }}">
+                <img class="mainIcon"
+                     src="{{ asset('/assets/bussiness-man.svg') }}"
+                     alt="profesional">
+
+                Agenda Profesional </a></div>
+        <div class ="mainDiv" id="img2"><a class=" pb-2 mainLink hvr-underline-from-center" href="{{ path('schedule', {"schedule" : "Personal"} ) }}"><img class="mainIcon"
+                                                                                         src="{{ asset('/assets/friends.svg') }}"
+                                                                                         alt="personal">
+
+                Agenda Personal </a></div>
+        <div class ="mainDiv" id="img3"><a class="pb-2 mainLink hvr-underline-from-center" href="{{ path('schedule') }}"><img class="mainIcon"
+                                                             src="{{ asset('/assets/phone-book.svg') }}"
+                                                             alt="viewAll">
+           Todos los contactos
+            </a></div>
+    </div>
+{% endblock %}

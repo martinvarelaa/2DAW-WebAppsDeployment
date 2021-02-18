@@ -1,0 +1,12 @@
+.user_icon{
+    width: 15px;
+    height: 15px;
+}
+
+
+.table{
+    overflow: scroll;
+    max-height: 110vh;
+    width: 90%;
+    margin: auto;
+}

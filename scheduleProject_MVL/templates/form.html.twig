@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+        <link href="{{ absolute_url(asset('/styles/form.css')) }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+
+
+    <div id="form">
+        {{ form(form) }}
+    </div>
+
+
+{% endblock %}
