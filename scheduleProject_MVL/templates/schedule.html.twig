@@ -31,15 +31,25 @@
 
                     <tr class="table-row">
                         <a class="tableLink" href="#">
+
                             <th scope="row">{{ key+1 }}</th>
                             <td>{{ contact.name }}</td>
                             <td>{{ contact.surname }}</td>
                             <td>{{ contact.age }}</td>
                             <td>{{ contact.email }}</td>
-                            <td>{{ contact.schedule }}</td>
+                            <td>
+                                {% if contact.schedule is same as 'Personal' %}
+                                   <img src="{{ asset('/assets/icons/001-user.svg') }}" class="icon">
+                                {% else %}
+                                    <img src=" {{ asset('/assets/icons/002-briefcase.svg') }}" class="icon">
+
+                                    {% endif %}
+                            </td>
                             <td>{{ contact.Telephone }}</td>
+                            <td><a href="{{ path('viewContact', {"id": contact.id}) }}"><button class="btn btn-warning hvr-grow-rotate"><img class="user_icon" src="{{ absolute_url(asset('/assets/icons/001-information.svg')) }}"></img></button></a></td>
+
                             <td><a href="{{ path('modify', {"id" : contact.id, "schedule" : contact.schedule}) }}"><button class="btn btn-success hvr-grow-rotate"><img class="user_icon" src="{{ absolute_url(asset('/assets/editar.svg')) }}"></img></button></a></td>
-                            <td><a href="{{ path('delete', {"id": contact.id, "schedule" : contact.schedule}) }}"><button class="btn btn-warning hvr-grow-rotate"><img class="user_icon" src="{{ absolute_url(asset('/assets/delete.svg')) }}"></img></button></a></td>
+                            <td><a href="{{ path('delete', {"id": contact.id, "schedule" : contact.sgchedule}) }}"><button class="btn btn-warning hvr-grow-rotate"><img class="user_icon" src="{{ absolute_url(asset('/assets/delete.svg')) }}"></img></button></a></td>
 
                         </a>
                         </tr>
@@ -47,11 +57,13 @@
                 </tbody>
 
             </table>
+            {% if showAlert is same as true %}
             {% block alert %}
-                <div class="alert alert-danger" role="alert">
-                    Ya hay un contacto con ese email o con ese teléfono, revisa los datos!
+                <div class="alert alert-success" role="alert">
+                    Contacto añadido con éxito!
                 </div>
             {% endblock %}
+            {% endif %}
 
 
 

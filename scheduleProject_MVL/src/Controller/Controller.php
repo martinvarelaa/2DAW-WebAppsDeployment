@@ -57,7 +57,8 @@ class Controller extends AbstractController
             $data = $contact_repository->findAll();
             return $this->render('schedule.html.twig', [
                 "title" => $this->title,
-                "data" => $data
+                "data" => $data,
+                'showAlert' => false
             ]);
         }
 
@@ -67,7 +68,8 @@ class Controller extends AbstractController
             $data = $contact_repository->getBySchedule($schedule);
             return $this->render('schedule.html.twig', [
                 "title" => $this->title,
-                "data" => $data
+                "data" => $data,
+                'showAlert' => false
             ]);
         }
 
@@ -103,17 +105,16 @@ class Controller extends AbstractController
 
             }
             $manager->flush();
+
             $data = $contact_repository->findAll();
 
-            if (!empty($schedule)) {
+
+
+            if (!isset($schedule)) {
                 return $this->redirectToRoute("schedule", ["schedule" => $schedule]);
             }
 
-            return $this->render('schedule.html.twig', [
-                "title" => $this->title,
-                "data" => $data,
-
-            ]);
+            return $this->redirectToRoute("schedule", ["schedule" => ""]);
 
         }
 
@@ -132,7 +133,7 @@ class Controller extends AbstractController
     {
 
         $contact = new Contact();
-
+        $this->title = "Add contact";
         $form = $this->createForm(Form::class, $contact);
         $contact_repository = $this->getDoctrine()->getRepository(Contact::class);
 
@@ -153,13 +154,14 @@ class Controller extends AbstractController
 
             return $this->render('schedule.html.twig', [ 'title' => $contact->getSchedule().' schedule',
                 'schedule' => $contact->getSchedule(),
-                'data' => $data]);
+                'data' => $data,
+                'showAlert' => true]);
 
         }
 
 
         return $this->render('form.html.twig', [
-            'title' => "Add contact",
+            'title' => $this->title,
             'form' => $form->createView()
 
         ]);
@@ -170,13 +172,12 @@ class Controller extends AbstractController
      * @Route ("schedule/modify/{id}/{schedule?}", name="modify")
      * @param Request $request
      * @param int $id
-     * @param string $schedule
      * @return Response
      */
     public function modifyContact(Request $request, int $id): Response
     {
 
-        $title = "Modify contact";
+        $this->title = "Modify contact";
 
         $manager = $this->getDoctrine()->getManager();
 
@@ -202,8 +203,32 @@ class Controller extends AbstractController
             }
 
         return $this->render('form.html.twig', [
-            'title' => $title,
+            'title' => $this->title,
             'form' => $form->createView()
+        ]);
+
+    }
+    /**
+     * @Route ("schedule/viewContact/{id}", name="viewContact")
+     *
+     * @param int $id
+     * @param string $schedule
+     * @return Response
+     */
+    public function viewContact( int $id): Response
+    {
+
+        $this->title = "View contact";
+
+
+        $manager = $this->getDoctrine()->getManager();
+        $contact_repository = $manager->getRepository(Contact::class);
+        $contact = $contact_repository->findOneBy(['id' => $id]);
+
+
+        return $this->render('contactView.html.twig', [
+            'title' => $this->title,
+            'contact' => $contact
         ]);
 
     }

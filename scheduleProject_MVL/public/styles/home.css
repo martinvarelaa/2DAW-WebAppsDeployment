@@ -59,38 +59,31 @@
 }
 
 .card{
-    height: fit-content;
+    height: auto;
     width: 30%;
 }
 
 .card-img{
-    height: 200px;
+    height: 210px;
 }
 
 .cards{
     display: flex;
     grid-area: card;
     justify-content: space-evenly;
+    margin-top: 20px;
 
 }
 
 .hvr-underline-from-center:before{
 
-    background-color: firebrick;
+    background-color: #c38d9e;
 
 
 
 
 }
 
-.hvr-underline-from-center{
-
-
-
-
-
-
-}
 
 .card{
     background: #c38d9e;

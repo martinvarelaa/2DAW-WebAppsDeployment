@@ -1,0 +1,30 @@
+#contactViewList {
+    list-style: none;
+    width: 50%;
+    margin: auto;
+    text-align: start;
+    margin-top: 40px;
+}
+
+#contactView {
+    width: 100%;
+}
+
+.contactIcons{
+    width: 60px;
+    height: 60px;
+
+}
+
+.listElement{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 20px;
+}
+
+.listElement{
+
+}
+

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('/styles/contactView.css') }}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<div id="contactView">
+    <ul id="contactViewList">
+        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/001-user.svg') }}"><h1 class="display-6">{{ contact.name }} {{ contact.surname }} , {{ contact.age }}</h1></li>
+        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/002-mail.svg') }}"><h1 class="display-6">{{ contact.email }}</h1></li>
+        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/001-phone-call.svg') }}"><h1 class="display-6">{{ contact.telephone }}</h1></li>
+        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/003-notes.svg') }}"><h1 class="display-6">{{ contact.schedule }}</h1></li>
+    </ul>
+
+
+
+</div>
+{% endblock%}
