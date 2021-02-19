@@ -3,11 +3,16 @@
     width: 50%;
     margin: auto;
     text-align: start;
-    margin-top: 40px;
+
 }
 
 #contactView {
-    width: 100%;
+    width: 90%;
+    margin: 5% ;
+    padding: 5%;
+
+    background-color:#e27d60 ;
+    border-radius: 10px;
 }
 
 .contactIcons{
@@ -21,10 +26,32 @@
     flex-direction: row;
     justify-content: space-between;
     align-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
 }
 
-.listElement{
+.listElement h2{
+    align-self: flex-end;
+}
+
+#backButton{
+
+    width: 10%;
 
 }
+
+#backLink{
+    color: black;
+    width: 100%;
+
+}
+
+#backLink :hover{
+    color: #5eb5e0;
+
+}
+
+
+
+
+
 

@@ -20,6 +20,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Scheudle</th>
                     <th scope="col">Telephone</th>
+                    <th scope="col">Info</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                 </tr>
@@ -49,7 +50,7 @@
                             <td><a href="{{ path('viewContact', {"id": contact.id}) }}"><button class="btn btn-warning hvr-grow-rotate"><img class="user_icon" src="{{ absolute_url(asset('/assets/icons/001-information.svg')) }}"></img></button></a></td>
 
                             <td><a href="{{ path('modify', {"id" : contact.id, "schedule" : contact.schedule}) }}"><button class="btn btn-success hvr-grow-rotate"><img class="user_icon" src="{{ absolute_url(asset('/assets/editar.svg')) }}"></img></button></a></td>
-                            <td><a href="{{ path('delete', {"id": contact.id, "schedule" : contact.sgchedule}) }}"><button class="btn btn-warning hvr-grow-rotate"><img class="user_icon" src="{{ absolute_url(asset('/assets/delete.svg')) }}"></img></button></a></td>
+                            <td><a href="{{ path('delete', {"id": contact.id, "schedule" : contact.schedule}) }}"><button class="btn btn-warning hvr-grow-rotate"><img class="user_icon" src="{{ absolute_url(asset('/assets/delete.svg')) }}"></img></button></a></td>
 
                         </a>
                         </tr>

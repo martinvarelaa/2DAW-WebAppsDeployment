@@ -34,7 +34,8 @@ footer{
 }
 #page-container{
     position: relative;
-    min-height: 115vh;
+    min-height: 100vh;
+    max-height: 115vh;
 
 }
 

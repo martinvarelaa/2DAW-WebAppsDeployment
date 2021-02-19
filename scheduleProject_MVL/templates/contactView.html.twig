@@ -5,12 +5,18 @@
 {% endblock %}
 {% block content %}
 <div id="contactView">
-    <ul id="contactViewList">
-        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/001-user.svg') }}"><h1 class="display-6">{{ contact.name }} {{ contact.surname }} , {{ contact.age }}</h1></li>
-        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/002-mail.svg') }}"><h1 class="display-6">{{ contact.email }}</h1></li>
-        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/001-phone-call.svg') }}"><h1 class="display-6">{{ contact.telephone }}</h1></li>
-        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/003-notes.svg') }}"><h1 class="display-6">{{ contact.schedule }}</h1></li>
+    <ul id="contactViewList ">
+        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/001-user.svg')  }}" alt="userIcon"><h2 class="display-6">{{ contact.name }} {{ contact.surname }} , {{ contact.age }} años </h2></li>
+        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/002-mail.svg') }}" alt="emailIcon"><h2 class="display-6">{{ contact.email }}</h2></li>
+        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/001-phone-call.svg') }}" alt="telephoneIcon"><h2 class="display-6">{{ contact.telephone }}</h2></li>
+        <li class="listElement"><img class="contactIcons" src="{{ asset('/assets/icons/003-notes.svg') }}" alt="scheduleIcon"><h2 class="display-6">{{ contact.schedule }}</h2></li>
+        <li class="listElement mt-4">  <a id="backLink" href="{{ path('schedule' , {schedule : contact.schedule} ) }}" >
+                <img class="contactIcons" src="{{ asset('/assets/icons/backIcon.svg') }}" alt="backIcon">
+            </a></li>
     </ul>
+    <div id="backButton">
+
+    </div>
 
 
 

@@ -14,6 +14,7 @@
     grid-template-areas:    " . card card card ."
                             " .   img1 img3 img2  ."
 ;
+    height: 70vh;
 
 }
 
@@ -106,17 +107,30 @@
     letter-spacing: 1.5px;
     color: #85dcb9;
     font-weight: bold;
+    font-size: 3.1vh;
 
 
 }
 
 .card-text{
+    margin-top: 5%;
     text-align: justify;
     letter-spacing: 1.5px;
     color: black;
     max-height: 20vh;
     overflow: hidden;
+    font-size: 3vh;
 
+}
+
+@media (max-height: 900px) {
+    .card-text{
+        font-size: 2.2vh;
+    }
+
+    .card-title{
+        font-size: 2.3vh;
+    }
 }
 
 .hvr-ripple-out:before

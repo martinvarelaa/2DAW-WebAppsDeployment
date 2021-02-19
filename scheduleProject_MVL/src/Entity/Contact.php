@@ -24,12 +24,22 @@ class Contact
     /**
      * @ORM\Column(type="string", length=100)
      * @Assert\NotBlank()
+     * @Assert\Regex(
+     *     pattern="/\d/",
+     *     match=false,
+     *     message="A name cannot contain a number"
+     * )
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=100)
      * @Assert\NotBlank()
+     * @Assert\Regex(
+     *     pattern="/\d/",
+     *     match=false,
+     *     message="A surname cannot contain a number"
+     * )
      */
 
     private $surname;
